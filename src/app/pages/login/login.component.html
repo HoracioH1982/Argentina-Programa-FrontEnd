@@ -1,0 +1,28 @@
+<p>login works!</p>
+
+<!--
+<a routerLink="/" routerLinkActive="active">Inicio</a>
+<a routerLink="profile" routerLinkActive="active" *ngIf="authService.login">Perfil</a>
+<a routerLink="profile" routerLinkActive="active" *ngIf="!authService.login">Login</a>
+<a routerLink="profile" (click)="logout()" href="#" *ngIf="authService.login">Logout</a>
+-->
+
+<form (ngSubmit)="onEnviar($event)"> <!--[formGroup]="form"-->
+    <div>
+        <label for="email">Email: </label>
+        <input type="email" formControlName="mail">
+    </div>
+    <br>
+    <div>
+        <label for="exmpleInputPassword1">Password: </label>
+        <input type="password" formControlName="password">
+    </div>
+    <br>
+    <div>
+        <button type="submit">Iniciar Sesión</button>
+    </div>
+
+
+
+
+</form>
