@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onEnviar(event: Event){
+onEnviar(event: Event){
      event.preventDefault;
      if (this.form.valid){
         //llamamos nuestro servicio para enviar los datos al servidor
@@ -42,5 +42,6 @@ export class LoginComponent implements OnInit {
         this.form.markAllAsTouched();
      }
   }
+  
 
 }
