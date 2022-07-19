@@ -1,0 +1,12 @@
+label { 
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 12pt;
+    word-spacing: 4mm;
+    padding-left: 2pt;    
+ }
+ h1 {
+     line-height: 2cm;
+     color:black;
+     background-color: gray;
+ }

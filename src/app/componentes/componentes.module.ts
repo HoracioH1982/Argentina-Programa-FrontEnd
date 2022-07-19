@@ -4,14 +4,13 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { LoginComponent } from './login2/login2.component';
 
 
-
 @NgModule({
   declarations: [
     PortfolioComponent,
     LoginComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ]
 })
 export class ComponentesModule { }

@@ -6,10 +6,11 @@ import { LoginComponent } from './componentes/login/login.component';
 import { NavbarComponent } from './componentes/layout/navbar/navbar.component';
 import { HeaderComponent } from './componentes/layout/header/header.component';
 import { FooterComponent } from './componentes/layout/footer/footer.component';
+import { GuardGuard } from './servicios/guard.guard';
 
 // Definimos o configuramos nuestras rutas
 const routes: Routes = [
-  {path: 'portfolio', component: PortfolioComponent},
+  {path: 'portfolio', component: PortfolioComponent, canActivate:[GuardGuard]},
   {path: 'login', component: LoginComponent },
   {path: '',redirectTo:'login',pathMatch:'full' }
 ];

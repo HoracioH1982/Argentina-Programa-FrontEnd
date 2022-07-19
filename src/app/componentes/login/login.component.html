@@ -1,13 +1,40 @@
-<h1 class="m-5">Iniciar Sesión</h1>
-<form class="m-5">
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Email</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+<div class="container">
+  <div class="sm-8">
+  </div>
+    <div class="sm-3">
+<h1 class="mb-5">Iniciar Sesión</h1>
+<form [formGroup]="form" class="m-5" (ngSubmit)="onEnviar($event)">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email: </label>
+    <input type="email" formControlName="email"
+    [ngClass]="{'is-invalid': Email?.errors && Email?.touched, 'is-valid': !Email?.errors && Email?.touched}" 
+    class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <div *ngIf="Email?.errors && Email?.touched">
+      <p *ngIf="Email?.hasError('required')" class="text-danger">
+        No se ha ingresado un email aún.
+      </p>
+      <p *ngIf="Email?.hasError('email')" class="text-danger">
+        El formato del email no es válido.
+      </p>
     </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Contraseña: </label>
+    <input type="password" formControlName="password" 
+    [ngClass]="{'is-invalid': Password?.errors && Password?.touched, 'is-valid': !Password?.errors && Password?.touched}"
+    class="form-control" id="exampleInputPassword1">
+    <div *ngIf="Password?.errors && Password?.touched">
+      <p *ngIf="Password?.hasError('required')" class="text-danger">
+        No se ha ingresado contraseña.
+      </p>
+      <p *ngIf="Password?.errors?.['minlength']" class="text-danger">
+        La contraseña debe contener al menos 8 caracteres.
+      </p>
     </div>
-    <button type="submit" class="btn btn-primary">Enviar</button>
+  </div>
+  <br>
+  <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
-  
+
+</div>
+</div>
