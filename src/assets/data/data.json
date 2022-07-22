@@ -2,11 +2,11 @@
     "name": "Horacio Néstor Hernández",
     "backgroundImage": "assets/img/edificios(1).jpg",
     "image": "assets/img/otra_foto_perfil.jpg",
-    "position": "Full Stack Developer Jr. comming soon",
+    "position": "Full Stack Developer Jr.",
     "company": {
-        "name": "Federar",
-        "img": "",
-        "url": "#"
+        "name": "Crediar SA - Federar",
+        "img": "assets/img/federar_logo.png",
+        "puesto": "Vendedor B"
     },
     "School": {
         "name": "Instituto Superior Politécnico Cordoba",
@@ -14,17 +14,8 @@
         "url": ""
     },
     "ubicacion": "Catamarca (Argentina)",
-    "about": "Analista de Sistemas de información",
+    "about": "Soy una persona responsable, creativa, con iniciativa y puntualidad; mi especialidad es informática, sistemas, administración en general, recursos humanos; encuentro facilidad para adaptarme a equipos de trabajo y lograr metas de productividad",
     "acercaDe": [
-        {
-            "position": "BackEnd Developer",
-            "company": "Pixar",
-            "img": "assets/img/APLogo-20-20(1).png",
-            "mode": "Jornada Parcial",
-            "start": "Mar 2019",
-            "end": "actualidad",
-            "timeElapsed": "2 años y 6 meses"
-        }
     ],
     "educacion": [
         {
@@ -32,7 +23,8 @@
             "tittle": "Full Stack Developer Jr",
             "img": "assets/img/ISPC_logo.png",
             "career": "Full Stack Developer Jr.",
-            "score": "Aprobado",
+            "estado": "Aprobado",
+            "score": "",
             "start": "sept 2021",
             "end": "mar 2022"
         },
@@ -41,6 +33,7 @@
             "tittle": "Analista de Sistemas de Información",
             "img": "assets/img/APLogo-20-20(1).png",
             "career": "Analista de Sistemas de Información",
+            "estado": "Aprobado",
             "score": "8,96",
             "start": "2001",
             "end": "2003"
@@ -50,6 +43,7 @@
             "tittle": "Analista Programador",
             "img": "assets/img/APLogo-20-20(1).png",
             "career": "Analista Programador",
+            "estado": "Aprobado",            
             "score": "8,96",
             "start": "2001",
             "end": "2002"
@@ -264,20 +258,26 @@
     ],
     "proyectos": [
         {
-            "nombre": "Creatividad e innovación",
-            "img": "assets/img/habilidades/Creatividad.png",
-            "habilidad": "Soft Skill",
-            "tipo": "A",
-            "porcentaje": "60",
-            "nivel": "intermedio"
+            "nombre": "CryptoCat Exchange",
+            "descripcion": "Trabajo Final Integrador del curso 'Programador Full Stack Jr.' - ISPC (Instituto Superior Politécnico Córdoba",
+            "link_repo": "https://github.com/pgCatamarca2021fs/aula2-grupoa-team-2a",
+            "link_sitio": "http://cryptocatamarca.somee.com/",
+            "img1": "assets/img/proyectos/home.jpg",
+            "img2": "assets/img/proyectos/Dashboard.jpg",
+            "img3": "assets/img/proyectos/registro.jpg",
+            "start": "09/2021",
+            "end": "03/2022"
         },
         {
-            "nombre": "Liderazgo",
-            "img": "assets/img/habilidades/Liderazgo.png",
-            "habilidad": "Soft Skill",
-            "tipo": "A",
-            "porcentaje": "50",
-            "nivel": "intermedio"
+            "nombre": "Proyecto Integrador Portfolio Web Full Stack",
+            "descripcion": "Trabajo Final Integrador del curso 'Argentina Programa - #Yo Programo' - Ministerio de Desarrollo Productivo - Argentina",
+            "link_repo": "https://github.com/pgCatamarca2021fs/aula2-grupoa-team-2a",
+            "link_sitio": "http://cryptocatamarca.somee.com/",
+            "img1": "assets/img/proyectos/home.jpg",
+            "img2": "assets/img/proyectos/Dashboard.jpg",
+            "img3": "assets/img/proyectos/registro.jpg",
+            "start": "09/2021",
+            "end": "07/2022"            
         }
     ]
 }
