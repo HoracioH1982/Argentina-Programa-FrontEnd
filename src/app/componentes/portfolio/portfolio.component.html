@@ -1,4 +1,43 @@
-<app-navbar></app-navbar>
 <app-header></app-header>
-<app-footer></app-footer>
+<body>
+    <!--Scripts-->
+    <script>
+        //funcion que cambiar a visible el párrafo de edición
+        function cambiar_parrafo() {
+            document.getElementById('edit-acercade').style.display = "block";
+            document.getElementById('file1').style.display = "block";
+            let texto = document.getElementById("text-acercade").innerText;
+            console.log(texto);
+        };
+        function myfuction2(valor) {
+            document.getElementById("text-acercade").innerText = valor;
+        };
+        //controla si usuario presiona enter
+        let textarea = document.getElementById("edit-acercade")
+        textarea.addEventListener(`keyup`, (e) => {
+            console.log(`Key "${e.key}" released [event: keyup]`)
+            //logMessage(`Key "${e.key}" released [event: keyup]`);
+            if (e.key == "Enter") {
+                document.getElementById("edit-acercade").style.display = "none";
+            }
+        });
+        //carga el contenido de un archivo de texto para mostrarlo en el párrafo
+        function showFile(input) {
+            let file = input.files[0];
+            alert(`File name: ${file.name}`);
+            alert(`Last modified: ${file.lastModified}`);
 
+            let reader = new FileReader();
+            reader.readAsText(file);
+            reader.onload = function () {
+                console.log(reader.result);
+                document.getElementById("text-acercade").innerText = reader.result;
+            };
+            reader.onerror = function () {
+                console.log(reader.error);
+            };
+        }
+
+    </script>
+</body>
+<app-footer></app-footer>
