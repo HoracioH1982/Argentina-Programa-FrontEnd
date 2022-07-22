@@ -10,7 +10,7 @@ import { GuardGuard } from './servicios/guard.guard';
 
 // Definimos o configuramos nuestras rutas
 const routes: Routes = [
-  {path: 'portfolio', component: PortfolioComponent, canActivate:[GuardGuard]},
+  {path: 'portfolio', component: PortfolioComponent}, // , canActivate:[GuardGuard]
   {path: 'login', component: LoginComponent },
   {path: '',redirectTo:'login',pathMatch:'full' }
 ];
