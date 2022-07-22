@@ -16,16 +16,10 @@
                     <span><a href="#"> Información de Contacto</a></span>
                 </div>
             </div>
-            <ul id="info-details" style="list-style-type:none">
-                <li><a href="#">
-                        <img src="assets/img/ISPC_logo.png">
-                        <h6 style="color:black">ISPC - Instituto Superior Politécnico Córdoba</h6>
-                </a></li>
-                <li><a href="#">
-                        <img src="assets/img/APLogo-20-20(1).png">
-                        <h6 style="color:black">Argentina Programa - 2da Edición #Yo Programo</h6>
-                </a></li>
-            </ul>
+            <br>
+            <div class="logo-image-container">
+                <p><img [src]="miPortfolio.company.img"> {{miPortfolio.company.name}} - Puesto: {{miPortfolio.company.puesto}}</p>
+            </div>
         </div>
         <div id="info-actions">
             <button class="button" class="btn btn-primary">Tengo Interés en</button>
