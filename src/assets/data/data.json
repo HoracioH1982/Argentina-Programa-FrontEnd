@@ -1,0 +1,283 @@
+{
+    "name": "Horacio Néstor Hernández",
+    "backgroundImage": "assets/img/edificios(1).jpg",
+    "image": "assets/img/otra_foto_perfil.jpg",
+    "position": "Full Stack Developer Jr. comming soon",
+    "company": {
+        "name": "Federar",
+        "img": "",
+        "url": "#"
+    },
+    "School": {
+        "name": "Instituto Superior Politécnico Cordoba",
+        "img": "",
+        "url": ""
+    },
+    "ubicacion": "Catamarca (Argentina)",
+    "about": "Analista de Sistemas de información",
+    "acercaDe": [
+        {
+            "position": "BackEnd Developer",
+            "company": "Pixar",
+            "img": "assets/img/APLogo-20-20(1).png",
+            "mode": "Jornada Parcial",
+            "start": "Mar 2019",
+            "end": "actualidad",
+            "timeElapsed": "2 años y 6 meses"
+        }
+    ],
+    "educacion": [
+        {
+            "school": "Instituto Superior Politécnico Cordoba",
+            "tittle": "Full Stack Developer Jr",
+            "img": "assets/img/ISPC_logo.png",
+            "career": "Full Stack Developer Jr.",
+            "score": "Aprobado",
+            "start": "sept 2021",
+            "end": "mar 2022"
+        },
+        {
+            "school": "Instituto Superior General San Martin",
+            "tittle": "Analista de Sistemas de Información",
+            "img": "assets/img/APLogo-20-20(1).png",
+            "career": "Analista de Sistemas de Información",
+            "score": "8,96",
+            "start": "2001",
+            "end": "2003"
+        },
+        {
+            "school": "Instituto Superior General San Martin",
+            "tittle": "Analista Programador",
+            "img": "assets/img/APLogo-20-20(1).png",
+            "career": "Analista Programador",
+            "score": "8,96",
+            "start": "2001",
+            "end": "2002"
+        }
+    ],
+    "experiencia": [
+        {
+            "empresa": "Guido Mogetta Empresa Constructora",
+            "img": "assets/img/Guido_Mogetta_logo.png",
+            "puesto": "Administrativo",
+            "descripcion": "Administración de Personal, Liquidaciones de sueldos, Compras, Licitaciones, Mantenimiento de Pc.",
+            "url": "https://www.guidomogetta.com.ar",
+            "start": "2005",
+            "end": "2011"
+        },
+        {
+            "empresa": "Cetrogar SA",
+            "img": "assets/img/cetrogar_logo.png",
+            "puesto": "Administrativo",
+            "descripcion": "Activador Telefonía, Inscripción Inicial Moto vehículos, Tareas administrativas Vs.",
+            "url": "https://www.cetrogar.com.ar/",
+            "start": "2011",
+            "end": "actualidad"
+        },
+        {
+            "empresa": "Crediar SA - Federar",
+            "img": "assets/img/federar_logo.png",
+            "puesto": "Vendedor B",
+            "descripcion": "Ventas, Cobranzas, Responsable temporal Sucursal en periodos vacacionales.",
+            "url": "http://prestamosfederar.com.ar",
+            "start": "2014",
+            "end": "actualidad"
+        }
+    ],
+    "habilidades": [
+        {
+            "nombre": "Creatividad e innovación",
+            "img": "assets/img/habilidades/Creatividad.png",
+            "habilidad": "Soft Skill",
+            "tipo": "A",
+            "porcentaje": "60",
+            "nivel": "intermedio"
+        },
+        {
+            "nombre": "Liderazgo",
+            "img": "assets/img/habilidades/Liderazgo.png",
+            "habilidad": "Soft Skill",
+            "tipo": "A",
+            "porcentaje": "50",
+            "nivel": "intermedio"
+        },
+        {
+            "nombre": "Trabajo en Equipo",
+            "img": "assets/img/habilidades/trabajo-equipo.jpg",
+            "habilidad": "Soft Skill",
+            "tipo": "A",
+            "porcentaje": "80",
+            "nivel": "Alto"
+        },
+        {
+            "nombre": "Comunicación y escucha activa",
+            "img": "assets/img/habilidades/comunicacion-efectiva.jpg",
+            "habilidad": "Soft Skill",
+            "tipo": "B",
+            "porcentaje": "60",
+            "nivel": "intermedio"
+        },
+        {
+            "nombre": "Flexibilidad y adaptación",
+            "img": "assets/img/habilidades/Flexibilidad.png",
+            "habilidad": "Soft Skill",
+            "tipo": "B",
+            "porcentaje": "60",
+            "nivel": "intermedio"
+        },
+        {
+            "nombre": "Planificación del tiempo",
+            "img": "assets/img/habilidades/Planificacion-del-tiempo.png",
+            "habilidad": "Soft Skill",
+            "tipo": "C",
+            "porcentaje": "60",
+            "nivel": "intermedio"
+        },
+        {
+            "nombre": "Orientación a resultados",
+            "img": "assets/img/habilidades/Orientacion-a-resultados.png",
+            "habilidad": "Soft Skill",
+            "tipo": "C",
+            "porcentaje": "60",
+            "nivel": "intermedio"
+        },
+        {
+            "nombre": "Negociación",
+            "img": "assets/img/habilidades/Negociacion.png",
+            "habilidad": "Soft Skill",
+            "tipo": "C",
+            "porcentaje": "60",
+            "nivel": "intermedio"
+        },
+        {
+            "nombre": "HTML5",
+            "img": "assets/img/Tecnologias/HTML5.png",
+            "habilidad": "Hard Skill",
+            "tipo": "Front End",
+            "porcentaje": "60",
+            "nivel": "intermedio"
+        },
+        {
+            "nombre": "CSS",
+            "img": "assets/img/Tecnologias/CSS.png",
+            "habilidad": "Hard Skill",
+            "tipo": "Front End",
+            "porcentaje": "60",
+            "nivel": "intermedio"
+        },
+        {
+            "nombre": "Javascript",
+            "img": "assets/img/Tecnologias/JS.png",
+            "habilidad": "Hard Skill",
+            "tipo": "Front End",
+            "porcentaje": "60",
+            "nivel": "intermedio"
+        },
+        {
+            "nombre": "Typescript",
+            "img": "assets/img/Tecnologias/Typescript.png",
+            "habilidad": "Hard Skill",
+            "tipo": "Front End",
+            "porcentaje": "60",
+            "nivel": "intermedio"
+        },
+        {
+            "nombre": "Angular",
+            "img": "assets/img/Tecnologias/Angular.png",
+            "habilidad": "Hard Skill",
+            "tipo": "Front End",
+            "porcentaje": "60",
+            "nivel": "intermedio"
+        },
+        {
+            "nombre": "Java",
+            "img": "assets/img/Tecnologias/Java.jpg",
+            "habilidad": "Hard Skill",
+            "tipo": "Back End",
+            "porcentaje": "60",
+            "nivel": "intermedio"
+        },
+        {
+            "nombre": "C#",
+            "img": "assets/img/Tecnologias/Csharp.jpg",
+            "habilidad": "Hard Skill",
+            "tipo": "Back End",
+            "porcentaje": "60",
+            "nivel": "intermedio"
+        },       
+        {
+            "nombre": "MySQL",
+            "img": "assets/img/Tecnologias/MySQL_Icon.jpg",
+            "habilidad": "Hard Skill",
+            "tipo": "Base de Datos",
+            "porcentaje": "60",
+            "nivel": "intermedio"
+        },
+        {
+            "nombre": "SQL Server",
+            "img": "assets/img/Tecnologias/SQL-Server.jpg",
+            "habilidad": "Hard Skill",
+            "tipo": "Base de Datos",
+            "porcentaje": "60",
+            "nivel": "intermedio"
+        },  
+        {
+            "nombre": "Scrum",
+            "img": "assets/img/Tecnologias/Scrum.png",
+            "habilidad": "Hard Skill",
+            "tipo": "Metodologías ágiles",
+            "porcentaje": "60",
+            "nivel": "intermedio"
+        },
+        {
+            "nombre": "Git",
+            "img": "assets/img/Tecnologias/Git.png",
+            "habilidad": "Hard Skill",
+            "tipo": "Control de Versiones",
+            "porcentaje": "60",
+            "nivel": "intermedio"
+        },
+        {
+            "nombre": "Github",
+            "img": "assets/img/Tecnologias/Github.png",
+            "habilidad": "Hard Skill",
+            "tipo": "Control de Versiones",
+            "porcentaje": "60",
+            "nivel": "intermedio"
+        },
+        {
+            "nombre": "Español",
+            "img": "assets/img/idiomas/Espaniol.png",
+            "habilidad": "Idiomas",
+            "tipo": "",
+            "porcentaje": "60",
+            "nivel": "Nativo"
+        },
+        {
+            "nombre": "Inglés",
+            "img": "assets/img/idiomas/Ingles.png",
+            "habilidad": "Idiomas",
+            "tipo": "",
+            "porcentaje": "60",
+            "nivel": "Básico"
+        }
+    ],
+    "proyectos": [
+        {
+            "nombre": "Creatividad e innovación",
+            "img": "assets/img/habilidades/Creatividad.png",
+            "habilidad": "Soft Skill",
+            "tipo": "A",
+            "porcentaje": "60",
+            "nivel": "intermedio"
+        },
+        {
+            "nombre": "Liderazgo",
+            "img": "assets/img/habilidades/Liderazgo.png",
+            "habilidad": "Soft Skill",
+            "tipo": "A",
+            "porcentaje": "50",
+            "nivel": "intermedio"
+        }
+    ]
+}
