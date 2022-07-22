@@ -1,24 +1,54 @@
-    <!--Proyectos-->
-    <div class="card mat-card" id="six-card">
-        <div class="card-titles">
-            <h2>Proyectos</h2>
+<!--Proyectos-->
+<div class="card mat-card" id="six-card">
+    <div class="card-titles">
+        <h2>Proyectos</h2>
+        <br>
+        <ul class="item-list" style="list-style-type:none">
+            <li *ngFor="let proyectos of proyectosList">                
             <!--Proyecto:
-                Fecha de realización:
-                Descripción:
-                Link:
-                Imagenes:
+             "nombre": "Proyecto Integrador Portfolio Web Full Stack",
+            "Descripcion": "Trabajo Final Integrador del curso 'Argentina Programa - #Yo Programo' - Ministerio de Desarrollo Productivo - Argentina",
+            "Link_repo": "https://github.com/pgCatamarca2021fs/aula2-grupoa-team-2a",
+            "Link_sitio": "http://cryptocatamarca.somee.com/",
+            "img1": "assets/img/Proyectos/home.png",
+            "img2": "assets/img/Proyectos/Dashboard.png",
+            "img3": "assets/img/Proyectos/registro.png",
+            "start": "09/2021",
+            "end": "07/2022"   
             -->
-            <div class="btn-edit" onclick="cambiar_parrafo()">
-                <a href="#" class="btn-right">
-                    <i class="fa fa-pen"></i>
-                </a>
-            </div>
-        </div>
-        <div>
-            <p id="text-acercade">Full Stack Jr Developer</p>
-        </div>
-        <div>
-            <input id="edit-acercade" type="text" oninput="myfuction2(this.value)" style="display:none">
-            <input type="file" id="file1" onchange="showFile(this)" style="display:none">
-        </div>
+                <div class="data-container">
+                    <div class="row">                   
+                        <div class="col-4 sm-3" style="padding-left: 40px">
+                            <div class="list-info">
+                                <div>
+                                    <h3>{{proyectos.nombre}}</h3>
+                                    <p>{{proyectos.descripcion}}</p>
+                                    <p><a [href]="proyectos.link_repo">{{proyectos.link_repo}}</a></p>
+                                    <p><a [href]="proyectos.link_sitio">{{proyectos.link_sitio}}</a></p>
+                                    <p><time>{{proyectos.start}}</time> - <time>{{proyectos.end}}</time></p>
+                                </div>             
+                                <div class="data-control">
+                                    <div class="btn-edit" onclick="cambiar_parrafo()">
+                                        <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
+                                    </div>
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="col-4 sm-3 text-center">
+                            <div class="image-container">
+                                <img [src]="proyectos.img1" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </li>
+        </ul>
     </div>
+</div>
+
+<div>
+    <input id="edit-acercade" type="text" oninput="myfuction2(this.value)" style="display:none">
+    <input type="file" id="file1" onchange="showFile(this)" style="display:none">
+</div>
+
