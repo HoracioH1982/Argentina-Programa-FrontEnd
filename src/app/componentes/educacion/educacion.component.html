@@ -1,0 +1,38 @@
+    <!--Educación-->
+    <div class="card mat-card" id="fourth-card">
+        <div class="card-titles">
+            <h2>Educación</h2>
+            <ul class="item-list" style="list-style-type:none">
+            <li *ngFor="let educacion of educacionList">
+                <div class="data-container">
+                    <a href="#">
+                        <div class="logo-image-container">
+                            <img
+                            class="logo-image"
+                            [src]="educacion.img"/>
+                        </div>
+                        <div class="list-info">
+                            <div>
+                                <h3>{{educacion.school}}</h3>
+                                <p>{{educacion.career}}, {{educacion.score}}</p>
+                                <p><time>{{educacion.start}}</time> - <time>{{educacion.end}}</time></p>                                
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="data-control">
+                    <div class="btn-edit" onclick="cambiar_parrafo()">
+                        <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
+                    </div>
+                </div>
+            <!--Institución+logo:
+                Carrera o Titulo:
+                Periodo-Año:-->
+            </li>
+            </ul>
+        </div>
+        <div>
+            <input id="edit-acercade" type="text" oninput="myfuction2(this.value)" style="display:none">
+            <input type="file" id="file1" onchange="showFile(this)" style="display:none">
+        </div>
+    </div>
