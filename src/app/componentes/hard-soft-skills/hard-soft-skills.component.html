@@ -1,0 +1,106 @@
+<!--Hard & Soft Skills-->
+<div class="card mat-card" id="five-card">
+    <div class="card-titles">
+        <h6 class="text-uppercase text-white text-center py-2 bg-black rounded-pill">Soft Skills</h6>
+        <div *ngFor="let habilidades of habilidadesList" class="item-list" style="list-style-type:none">
+            <ul class="item-list" style="list-style-type:none">
+                <li *ngIf="habilidades.habilidad == 'Soft Skill'" class="list-item">
+                    <img class="logo-image-skills" [src]="habilidades.img" /> {{habilidades.nombre}}
+                </li>
+            </ul>
+        </div>
+        <h6 class="text-uppercase text-white text-center py-2 bg-black rounded-pill">Hard Skills</h6>
+        <div *ngFor="let habilidades of habilidadesList" class="item-list" style="list-style-type:none">
+            <ul class="item-list" style="list-style-type:none">
+                <li *ngIf="habilidades.habilidad == 'Hard Skill'" class="list-item">
+                    <img class="logo-image-skills" [src]="habilidades.img" /> {{habilidades.nombre}}
+                </li>
+            </ul>
+        </div>
+        <h6 class="text-uppercase text-white text-center py-2 bg-black rounded-pill">Idiomas</h6>
+        <div *ngFor="let habilidades of habilidadesList" class="item-list" style="list-style-type:none">
+            <ul class="item-list" style="list-style-type:none">
+                <li *ngIf="habilidades.habilidad == 'Idiomas'" class="list-item">
+                    <img class="logo-image-skills" [src]="habilidades.img" /> {{habilidades.nombre}} {{habilidades.nivel}}
+                </li>
+            </ul>
+        </div>
+        <!--<h6></h6> *ngFor="let element of cripto"  value="{{element.Nombre+element.IdMoneda}}"
+        <div class="container" style="padding: 2px 2px 2px 2px">
+            <h6   ></h6>
+            <ul>
+                <li><img class="logo-image-skills"
+                        src="habilidades.img" />{{tipoHab.nombre}}</li>
+            </ul>
+        </div>-->
+
+        <!--<hello name="{{ name }}"></hello>
+      <li *ngFor="let hero of data">
+      {{ hero.format }}
+      <p *ngFor="let subform of hero.subFormats">
+          {{subform.name}}
+      </p>
+    </li>-->
+
+
+    </div>
+</div>
+<!--
+    <div class="card mat-card" id="five-card">
+    <div class="card-titles">
+            <h6 class="text-uppercase text-white text-center py-2 bg-black rounded-pill">Soft Skills</h6>
+            <ul>
+                <li class="list-item"> Creatividad e innovación </li>
+                <li class="list-item"><img class="logo-image-skills" src="assets/img/habilidades/Creatividad.png" />
+                    Liderazgo</li>
+                <li class="list-item"><img class="logo-image-skills" src="assets/img/habilidades/Creatividad.png" />
+                    Trabajo en equipo</li>
+                <li class="list-item"><img class="logo-image-skills" src="assets/img/habilidades/Creatividad.png" />
+                    Comunicación y escucha activa</li>
+                <li class="list-item"><img class="logo-image-skills" src="assets/img/habilidades/Creatividad.png" />
+                    Flexibilidad y adaptación</li>
+                <li class="list-item"><img class="logo-image-skills" src="assets/img/habilidades/Creatividad.png" />
+                    Planificación del tiempo</li>
+                <li class="list-item"><img class="logo-image-skills" src="assets/img/habilidades/Creatividad.png" />
+                    Orientación a resultados</li>
+                <li class="list-item"><img class="logo-image-skills" src="assets/img/habilidades/Creatividad.png" />
+                    Negociación</li>
+            </ul>
+            <h6 class="text-uppercase text-white text-center py-2 bg-black rounded-pill" id="habilidad">Hard Skills</h6>
+            <div class="container" style="padding: 2px 2px 2px 2px">
+                <h6 class="bg-success text-white text-center py-2 rounded-pill" id="tipoHab">FrontEnd</h6>
+                <ul>
+                    <li class="list-item" id="nombreHab"><img class="logo-image-skills" src="assets/img/habilidades/Creatividad.png"/> HTML5 </li>
+                    <li class="list-item"> <i class="fab fa-css3-alt"></i> CSS </li>
+                    <li class="list-item"><i class="fab fa-js"></i> Javascript </li>
+                    <li class="list-item"><i class="fab fa-bootstrap"></i> Bootstrap</li>
+                    <li class="list-item"><b>TS</b> Typescript </li>
+                    <li class="list-item"><i class="fab fa-angular"></i> Angular </li>
+                </ul>
+                <h6 class="bg-success text-white text-center py-2 rounded-pill">BackEnd</h6>
+                <ul>
+                    <li class="list-item"><i class="fab fa-java"></i> Java </li>
+                    <li class="list-item"><b>C#</b> C# </li>
+                </ul>
+                <h6 class="bg-success text-white text-center py-2 rounded-pill">Base de Datos</h6>
+                <ul>
+                    <li class="list-item">MySQL</li>
+                    <li class="list-item">SQL Server</li>
+                </ul>
+                <h6 class="bg-success text-white text-center py-2 rounded-pill">Metodologías ágiles</h6>
+                <ul>
+                    <li class="list-item">Scrum</li>
+                </ul>
+                <h6 class="bg-success text-white text-center py-2 rounded-pill">Control de Versiones</h6>
+                <ul>
+                    <li class="list-item">Git - Github</li>
+                </ul>
+                <h6 class="bg-success text-white text-center py-2 rounded-pill">Idiomas</h6>
+                <ul>
+                    <li>Español Nativo</li>
+                    <li>Inglés Básico (Lectura y Escritura)</li>
+                </ul>
+            </div>
+    </div>
+</div>
+-->
