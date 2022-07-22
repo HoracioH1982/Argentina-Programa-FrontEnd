@@ -1,1 +1,69 @@
-/* You can add global styles to this file, and also import other style files */
+.mat-card{
+    border-radius: 32px;
+    margin: 10px 10px;
+    padding: 20px;
+    border-color: black;
+}
+.mat-card#first-card {
+    padding: 0;
+}
+div#profile-background {
+    display: flex;
+    z-index: 1;
+}
+div#profile-background img {
+    width: 100%;
+    border-radius: 32px 32px 0 0;
+}
+.profile-image {
+    border-radius: 50%;
+    position: relative;
+    width: 152px;
+    height: 152px;
+    margin-top: -110px;
+    z-index: 1;
+}
+#divinfo-actions {
+    display: flex;
+}
+.card {
+    position: realtive;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 125);
+    border-radius: 30px;
+}
+#info-img {
+    display:flex;
+}
+.btn-right {
+    display: flex;
+    align-self: flex-end;
+}
+.fa-button,.fa {
+    color: black;
+    display: block;
+    height: 2.4rem;
+    width: 2.4rem;
+    line-height: 2.4rem;
+    text-align: center;
+    border-radius: 50%;
+    background: white;
+}
+.fa-button:hover,.fa:hover {
+    background: gray
+}
+.logo-image-skills {
+    border-radius: 20%;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    /*margin-top: -110px;*/
+    z-index: 1;
+}
+
+
