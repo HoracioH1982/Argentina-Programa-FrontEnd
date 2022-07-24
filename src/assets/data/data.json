@@ -1,6 +1,6 @@
 {
     "name": "Horacio Néstor Hernández",
-    "backgroundImage": "assets/img/edificios(1).jpg",
+    "backgroundImage": "assets/img/technology.jpg",
     "image": "assets/img/otra_foto_perfil.jpg",
     "position": "Full Stack Developer Jr.",
     "company": {
@@ -8,14 +8,37 @@
         "img": "assets/img/federar_logo.png",
         "puesto": "Vendedor B"
     },
-    "School": {
-        "name": "Instituto Superior Politécnico Cordoba",
-        "img": "",
-        "url": ""
-    },
     "ubicacion": "Catamarca (Argentina)",
     "about": "Soy una persona responsable, creativa, con iniciativa y puntualidad; mi especialidad es informática, sistemas, administración en general, recursos humanos; encuentro facilidad para adaptarme a equipos de trabajo y lograr metas de productividad",
-    "acercaDe": [
+    "redes_sociales": [
+        {
+            "id": "1",
+            "nombre": "LinkedIn",
+            "img": "assets/img/iconos/linkedin-brands.svg",
+            "url": "https://www.linkedin.com/in/horacio-hern%C3%A1ndez-4999051b4/",
+            "detalle": "LinkedIn"
+        },
+        {
+            "id": "2",
+            "nombre": "InfoJobs",
+            "img": "assets/img/iconos/info_jobs.svg",
+            "url": "https://www.infojobs.net/horacionestor-hernandez.prf",
+            "detalle": "InfoJobs"
+        },
+        {
+            "id": "3",
+            "nombre": "TecnoEmpleo",
+            "img": "assets/img/iconos/tecno-empleo-n.svg",
+            "url": "https://www.tecnoempleo.com/horacio-hernandez-.mpt",
+            "detalle": "TecnoEmpleo"
+        },
+        {
+            "id": "4",
+            "nombre": "Github",
+            "img": "assets/img/iconos/github_icon.svg",
+            "url": "https://github.com/HoracioH1982",
+            "detalle": "Github"
+        }
     ],
     "educacion": [
         {
@@ -84,7 +107,7 @@
             "img": "assets/img/habilidades/Creatividad.png",
             "habilidad": "Soft Skill",
             "tipo": "A",
-            "porcentaje": "60",
+            "porcentaje": "85",
             "nivel": "intermedio"
         },
         {
@@ -92,7 +115,7 @@
             "img": "assets/img/habilidades/Liderazgo.png",
             "habilidad": "Soft Skill",
             "tipo": "A",
-            "porcentaje": "50",
+            "porcentaje": "70",
             "nivel": "intermedio"
         },
         {
@@ -108,7 +131,7 @@
             "img": "assets/img/habilidades/comunicacion-efectiva.jpg",
             "habilidad": "Soft Skill",
             "tipo": "B",
-            "porcentaje": "60",
+            "porcentaje": "80",
             "nivel": "intermedio"
         },
         {
@@ -116,7 +139,7 @@
             "img": "assets/img/habilidades/Flexibilidad.png",
             "habilidad": "Soft Skill",
             "tipo": "B",
-            "porcentaje": "60",
+            "porcentaje": "90",
             "nivel": "intermedio"
         },
         {
@@ -124,7 +147,7 @@
             "img": "assets/img/habilidades/Planificacion-del-tiempo.png",
             "habilidad": "Soft Skill",
             "tipo": "C",
-            "porcentaje": "60",
+            "porcentaje": "75",
             "nivel": "intermedio"
         },
         {
@@ -132,7 +155,7 @@
             "img": "assets/img/habilidades/Orientacion-a-resultados.png",
             "habilidad": "Soft Skill",
             "tipo": "C",
-            "porcentaje": "60",
+            "porcentaje": "90",
             "nivel": "intermedio"
         },
         {
@@ -148,7 +171,7 @@
             "img": "assets/img/Tecnologias/HTML5.png",
             "habilidad": "Hard Skill",
             "tipo": "Front End",
-            "porcentaje": "60",
+            "porcentaje": "85",
             "nivel": "intermedio"
         },
         {
@@ -156,7 +179,7 @@
             "img": "assets/img/Tecnologias/CSS.png",
             "habilidad": "Hard Skill",
             "tipo": "Front End",
-            "porcentaje": "60",
+            "porcentaje": "80",
             "nivel": "intermedio"
         },
         {
@@ -164,7 +187,7 @@
             "img": "assets/img/Tecnologias/JS.png",
             "habilidad": "Hard Skill",
             "tipo": "Front End",
-            "porcentaje": "60",
+            "porcentaje": "85",
             "nivel": "intermedio"
         },
         {
@@ -180,7 +203,7 @@
             "img": "assets/img/Tecnologias/Angular.png",
             "habilidad": "Hard Skill",
             "tipo": "Front End",
-            "porcentaje": "60",
+            "porcentaje": "70",
             "nivel": "intermedio"
         },
         {
@@ -204,7 +227,7 @@
             "img": "assets/img/Tecnologias/MySQL_Icon.jpg",
             "habilidad": "Hard Skill",
             "tipo": "Base de Datos",
-            "porcentaje": "60",
+            "porcentaje": "70",
             "nivel": "intermedio"
         },
         {
@@ -220,7 +243,7 @@
             "img": "assets/img/Tecnologias/Scrum.png",
             "habilidad": "Hard Skill",
             "tipo": "Metodologías ágiles",
-            "porcentaje": "60",
+            "porcentaje": "75",
             "nivel": "intermedio"
         },
         {
@@ -228,7 +251,7 @@
             "img": "assets/img/Tecnologias/Git.png",
             "habilidad": "Hard Skill",
             "tipo": "Control de Versiones",
-            "porcentaje": "60",
+            "porcentaje": "75",
             "nivel": "intermedio"
         },
         {
@@ -236,7 +259,7 @@
             "img": "assets/img/Tecnologias/Github.png",
             "habilidad": "Hard Skill",
             "tipo": "Control de Versiones",
-            "porcentaje": "60",
+            "porcentaje": "75",
             "nivel": "intermedio"
         },
         {
@@ -258,6 +281,7 @@
     ],
     "proyectos": [
         {
+            "id": "A",
             "nombre": "CryptoCat Exchange",
             "descripcion": "Trabajo Final Integrador del curso 'Programador Full Stack Jr.' - ISPC (Instituto Superior Politécnico Córdoba",
             "link_repo": "https://github.com/pgCatamarca2021fs/aula2-grupoa-team-2a",
@@ -269,13 +293,14 @@
             "end": "03/2022"
         },
         {
+            "id": "B",
             "nombre": "Proyecto Integrador Portfolio Web Full Stack",
             "descripcion": "Trabajo Final Integrador del curso 'Argentina Programa - #Yo Programo' - Ministerio de Desarrollo Productivo - Argentina",
-            "link_repo": "https://github.com/pgCatamarca2021fs/aula2-grupoa-team-2a",
-            "link_sitio": "http://cryptocatamarca.somee.com/",
-            "img1": "assets/img/proyectos/home.jpg",
-            "img2": "assets/img/proyectos/Dashboard.jpg",
-            "img3": "assets/img/proyectos/registro.jpg",
+            "link_repo": "https://github.com/HoracioH1982/Argentina-Programa-FrontEnd",
+            "link_sitio": "http://",
+            "img1": "assets/img/proyectos/Portfolio1.png",
+            "img2": "assets/img/proyectos/Portfolio1.png",
+            "img3": "assets/img/proyectos/Portfolio1.png",
             "start": "09/2021",
             "end": "07/2022"            
         }
