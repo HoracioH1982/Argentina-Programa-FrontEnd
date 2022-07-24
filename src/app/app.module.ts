@@ -3,13 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InterceptorService } from './servicios/interceptor.service';
 //componentes
 import { LayoutModule } from './componentes/layout/layout.module';
 import { PagesModule } from './componentes/pages/pages.module';
 import { LoginComponent } from './componentes/login/login.component';
+import { PortfolioComponent } from './componentes/portfolio/portfolio.component';
 import { PortfolioService } from './servicios/portfolio.service';
 import { EncabezadoComponent } from './componentes/encabezado/encabezado.component';
 import { AcercaDeComponent } from './componentes/acerca-de/acerca-de.component';
