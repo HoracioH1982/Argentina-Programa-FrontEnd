@@ -4,39 +4,65 @@
         <h2>Proyectos</h2>
         <br>
         <ul class="item-list" style="list-style-type:none">
-            <li *ngFor="let proyectos of proyectosList">                
-            <!--Proyecto:
-             "nombre": "Proyecto Integrador Portfolio Web Full Stack",
-            "Descripcion": "Trabajo Final Integrador del curso 'Argentina Programa - #Yo Programo' - Ministerio de Desarrollo Productivo - Argentina",
-            "Link_repo": "https://github.com/pgCatamarca2021fs/aula2-grupoa-team-2a",
-            "Link_sitio": "http://cryptocatamarca.somee.com/",
-            "img1": "assets/img/Proyectos/home.png",
-            "img2": "assets/img/Proyectos/Dashboard.png",
-            "img3": "assets/img/Proyectos/registro.png",
-            "start": "09/2021",
-            "end": "07/2022"   
-            -->
+            <li *ngFor="let proyectos of proyectosList">
                 <div class="data-container">
-                    <div class="row">                   
+                    <div class="row">
                         <div class="col-4 sm-3" style="padding-left: 40px">
                             <div class="list-info">
                                 <div>
                                     <h3>{{proyectos.nombre}}</h3>
                                     <p>{{proyectos.descripcion}}</p>
+                                    <p><time>{{proyectos.start}}</time> - <time>{{proyectos.end}}</time></p>
                                     <p><a [href]="proyectos.link_repo">{{proyectos.link_repo}}</a></p>
                                     <p><a [href]="proyectos.link_sitio">{{proyectos.link_sitio}}</a></p>
-                                    <p><time>{{proyectos.start}}</time> - <time>{{proyectos.end}}</time></p>
-                                </div>             
+                                </div>
                                 <div class="data-control">
                                     <div class="btn-edit" onclick="cambiar_parrafo()">
                                         <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
                                     </div>
                                 </div>
-                            </div>   
+                            </div>
                         </div>
-                        <div class="col-4 sm-3 text-center">
-                            <div class="image-container">
-                                <img [src]="proyectos.img1" />
+                        <div class="col-8 sm-3 text-center">                            
+                            <div [id]="proyectos.id" class="carousel slide" data-bs-ride="false">
+                                <div class="carousel-indicators">
+                                    <button type="button" [attr.data-bs-target]="'#'+proyectos.id"  data-bs-slide-to="0"
+                                        class="active" aria-current="true" aria-label="'Home'"></button>                                        
+                                    <button type="button" [attr.data-bs-target]="'#'+proyectos.id" data-bs-slide-to="1"
+                                        aria-label="'Registro'"></button>
+                                    <button type="button" [attr.data-bs-target]="'#'+proyectos.id" data-bs-slide-to="2"
+                                        aria-label="'Dashboard'"></button>
+                                </div>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img [src]="proyectos.img1" class="d-block w-100" alt="Home">
+                                        <div class="carousel-caption d-none d-md-block">                                           
+                                            <p>Home</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img [src]="proyectos.img2" class="d-block w-100" alt="Registro">
+                                        <div class="carousel-caption d-none d-md-block">                                            
+                                            <p>Registro</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img [src]="proyectos.img3" class="d-block w-100" alt="Dashboard">
+                                        <div class="carousel-caption d-none d-md-block">                                           
+                                            <p>Dashboard</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button"
+                                    [attr.data-bs-target]="'#'+proyectos.id" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button"
+                                    [attr.data-bs-target]="'#'+proyectos.id" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -51,4 +77,3 @@
     <input id="edit-acercade" type="text" oninput="myfuction2(this.value)" style="display:none">
     <input type="file" id="file1" onchange="showFile(this)" style="display:none">
 </div>
-
