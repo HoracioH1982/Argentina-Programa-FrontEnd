@@ -13,4 +13,5 @@ export class PortfolioService {
   {
     return this.http.get<any>('./assets/data/data.json'); //this.url+"persona"
   }
+  
 }

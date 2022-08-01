@@ -1,30 +1,75 @@
 <div class="card mat-card" id="first-card">
-    <div id="profile-background"><img [src]="miPortfolio.backgroundImage"/></div>
-    <div class="btn-edit"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div>  
-    <div class="btn-edit"><a href="#" class="btn-right"><i class="fa-solid fa-trash-can"></i></a></div>
+    <div id="profile-background">
+        <img [src]="ListaPerso.urlBackground"/>
+    </div>
+    <!--boton background-->
+    <div class="col-2 sm-3 data-control" style="margin-left: 1px 0px 0px 20px;">
+        <div class="btn-edit" data-bs-toggle="modal" data-bs-target="#editarAcercade">
+            <a class="btn-right"><i class="fa fa-edit"></i></a>
+        </div>
+    </div>
     <div id="info" style="padding: 16px">
         <div id="info-img">
-            <img class="profile-image" [src]="miPortfolio.image">
-            <div class="btn-edit"><a href="#" class="btn-right"><i class="fa fa-pen"></i></a></div>                
-        </div>
-        <div id="info-data">
-            <div>
-                <h1>{{miPortfolio.name}}</h1>
-                <div id="info-company">{{miPortfolio.position}}</div>
-                <div id="info-contact">
-                    <span>{{miPortfolio.ubicacion}}</span>
-                    <span><a href="#"> Información de Contacto</a></span>
+            <div class="col-2 sm-3">
+                <img class="profile-image" [src]="ListaPerso.urlFoto"><!-- -->
+            </div>
+            <!--boton editar foto perfil-->
+            <div class="col-2 sm-3 data-control" style="margin-left: -10px;">
+                <div class="btn-edit" data-bs-toggle="modal" data-bs-target="#editarAcercade">
+                    <a class="btn-right"><i class="fa fa-edit"></i></a>
                 </div>
             </div>
-            <br>
-            <div class="logo-image-container">
-                <p><img [src]="miPortfolio.company.img"> {{miPortfolio.company.name}} - Puesto: {{miPortfolio.company.puesto}}</p>
-            </div>
         </div>
-        <div id="info-actions">
-            <button class="button" class="btn btn-primary">Tengo Interés en</button>
-            <button class="button" class="btn btn-ligth">Añadir Sección</button>
-            <button class="button" class="btn btn-ligth">Más</button>
+        <div class="row">  
+            <div class="col-3 sm-3" id="info-data">
+                <div>
+                    <h1>{{ListaPerso.nombres}} {{ListaPerso.apellido}}</h1>
+                    <div id="info-company">Full Stack Developer Jr.                    
+                    </div>
+                    <div id="info-contact">
+                        <p>{{ListaPerso.domicilio}} - {{ListaPerso.nacionalidad}} </p>
+                        <br>
+                        <span><a href="#"> Información de Contacto</a></span>
+                    </div>
+                </div>
+                <br>
+                <!--logo trabajo actual-->
+                <!--<div class="logo-image-container">
+                    <p><img [src]="ListaPerso.logoImg">{{ListaPerso.empresa}} </p>
+                </div>-->
+            </div>
+            <!--botones editar y eliminar datos perfil-->
+            <div class="col-2 sm-3 data-control">
+                <div class="btn-edit" data-bs-toggle="modal" data-bs-target="#editarAcercade">
+                    <a class="btn-right"><i class="fa fa-edit"></i></a>
+                </div>
+                <div class="btn-edit" data-bs-toggle="modal" data-bs-target="">
+                    <a class="btn-right"><i class="fa fa-times"></i></a>
+                </div>
+            </div>
+        </div>        
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="editarAcercade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Acerca de - Editar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="col-md-12 position-relative" style="padding: 4px 4px;">
+                <label for="validationTooltip02" class="form-label">Sobre Mi:</label>
+                <input type="text" class="form-control" id="validationTooltip02" value="" required>
+                <div class="invalid-tooltip">
+                    ingrese un dato válido
+                </div>
+              </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Guardar cambios</button>
+            </div>
         </div>
     </div>
 </div>

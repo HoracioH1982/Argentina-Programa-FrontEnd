@@ -8,8 +8,8 @@
     margin: 10px 10px;
     padding: 20px;
     border-color: black;
-    background-image: linear-gradient(to right, rgb(174, 182, 105),
-    rgb(175, 174, 174), rgb(174, 182, 105));
+    background-image: linear-gradient(to right, rgb(192, 204, 147),
+     rgb(185, 196, 93), rgb(192, 204, 147), rgb(192, 204, 147));
 }
 .mat-card#first-card {
     padding: 0;
@@ -20,8 +20,8 @@ div#profile-background {
 }
 div#profile-background img {
     width: 100%;
-    height: 250px;
-    border-radius: 32px 32px 0 0;
+    height: 340px;
+    border-radius: 32px 32px 32px 32px;
 }
 .profile-image {
     border-radius: 50%;
@@ -87,3 +87,6 @@ div#profile-background img {
 }
 
 
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,71 +1,40 @@
 <!--Hard & Soft Skills-->
 <div class="card mat-card" id="five-card">
     <div class="card-titles">
-        <h6 class="text-uppercase text-white text-center py-2 bg-black rounded-pill">Soft Skills</h6>
+        <h4 class="text-white text-center py-2 bg-black rounded-pill" >Habilidades</h4>
         <div *ngFor="let habilidades of habilidadesList" class="item-list" style="list-style-type:none;">
+            
             <div class="row">
                 <div class="col-2 sm3"></div>
-                <div *ngIf="habilidades.habilidad == 'Soft Skill'" class="col-4 sm-3">
-                    <ul class="item-list" style="list-style-type:none">
-                        <li *ngIf="habilidades.habilidad == 'Soft Skill'" class="list-item">
-                            <img class="logo-image-skills" [src]="habilidades.img" /> {{habilidades.nombre}}
-                        </li>
-                    </ul>
-                </div>
+                    <div class="col-4 sm-3">
+                        <!--item.tipoEducacion.nombre-->
+                        <ul class="item-list" style="list-style-type:none">
+                            <li class="list-item">
+                                <img class="logo-image-skills" [src]="habilidades.imgHabilidad" /> {{habilidades.nombreHabilidad.nombre}} - {{habilidades.nombre}} 
+                            </li>
+                        </ul>
+                    </div>
                 <div class="col-4 sm-3" style="display:flex; align-items:center ">
-                    <div *ngIf="habilidades.habilidad == 'Soft Skill'" class="progress bg-secondary"
+                    <div class="progress bg-secondary"
                         style="height: 20px; width: 100%; padding: 2px;">
                         <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
                             role="progressbar" [attr.style]="'width: '+habilidades.porcentaje+'%;'" aria-valuenow="100"
-                            aria-valuemin="0" aria-valuemax="100">{{habilidades.porcentaje}}%</div>
+                            aria-valuemin="0" aria-valuemax="100">{{habilidades.porcentaje}}%
+                        </div>
+                    </div>
+                </div>                
+                <!--botones edicion-->
+                <div class="col-2 sm-3 data-control">
+                    <div class="btn-edit"  data-bs-toggle="modal" data-bs-target="#editarEducacion">
+                        <a class="btn-right"><i class="fa fa-edit"></i></a>
+                    </div>
+                    <div class="btn-edit" data-bs-toggle="modal" data-bs-target="">
+                        <a class="btn-right"><i class="fa fa-times"></i></a>
                     </div>
                 </div>
-                <div class="col-2 sm3"></div>
             </div>
+
         </div>
-        <h6 class="text-uppercase text-white text-center py-2 bg-black rounded-pill">Hard Skills</h6>
-        <div *ngFor="let habilidades of habilidadesList" class="item-list" style="list-style-type:none;">
-            <div class="row">
-                <div class="col-2 sm3"></div>
-                <div *ngIf="habilidades.habilidad == 'Hard Skill'" class="col-4 sm-3">
-                    <ul class="item-list" style="list-style-type:none">
-                        <li *ngIf="habilidades.habilidad == 'Hard Skill'" class="list-item">
-                            <img class="logo-image-skills" [src]="habilidades.img" /> {{habilidades.nombre}}
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-4 sm-3" style="display:flex; align-items:center ">
-                    <div *ngIf="habilidades.habilidad == 'Hard Skill'" class="progress bg-secondary"
-                        style="height: 20px; width: 100%; padding: 2px;">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                            role="progressbar" [attr.style]="'width: '+habilidades.porcentaje+'%;'" aria-valuenow="100"
-                            aria-valuemin="0" aria-valuemax="100">{{habilidades.porcentaje}}%</div>
-                    </div>
-                </div>
-                <div class="col-2 sm3"></div>
-            </div>
-        </div>
-        <h6 class="text-uppercase text-white text-center py-2 bg-black rounded-pill">Idiomas</h6>
-        <div *ngFor="let habilidades of habilidadesList" class="item-list" style="list-style-type:none;">
-            <div class="row">
-                <div class="col-2 sm3"></div>
-                <div *ngIf="habilidades.habilidad == 'Idiomas'" class="col-4 sm-3">
-                    <ul class="item-list" style="list-style-type:none">
-                        <li *ngIf="habilidades.habilidad == 'Idiomas'" class="list-item">
-                            <img class="logo-image-skills" [src]="habilidades.img" /> {{habilidades.nombre}}
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-4 sm-3" style="display:flex; align-items:center ">
-                    <div *ngIf="habilidades.habilidad == 'Idiomas'" class="progress bg-secondary"
-                        style="height: 20px; width: 100%; padding: 2px;">
-                        <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                            role="progressbar" [attr.style]="'width: '+habilidades.porcentaje+'%;'" aria-valuenow="100"
-                            aria-valuemin="0" aria-valuemax="100">{{habilidades.porcentaje}}%</div>
-                    </div>
-                </div>
-                <div class="col-2 sm3"></div>
-            </div>
-        </div>
+
     </div>
 </div>

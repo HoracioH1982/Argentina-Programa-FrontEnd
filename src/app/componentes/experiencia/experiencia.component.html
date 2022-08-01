@@ -6,25 +6,28 @@
             <li *ngFor="let experiencia of experienciaList">
                 <div class="data-container">
                     <div class="row">
-                        <div class="col-3 sm-3 text-center">
+                        <div class="col-2 sm-3 text-center">
                             <div class="logo-image-container">
-                                <img [src]="experiencia.img" />
+                                <img [src]="experiencia.logoImg" />
                             </div>
                         </div>
                         <div class="col-8 sm-3" style="padding-left: 40px">
                             <div class="list-info">
                                 <div>
                                     <h3>{{experiencia.empresa}}</h3>
-                                    <p>{{experiencia.puesto}}</p>
+                                    <p>{{experiencia.funcion}}</p>
                                     <p>{{experiencia.descripcion}}</p>
                                     <p><a [href]="experiencia.url">{{experiencia.url}}</a></p>
                                     <p><time>{{experiencia.start}}</time> - <time>{{experiencia.end}}</time></p>
                                 </div>
-                            </div>                
-                            <div class="data-control">
-                                <div class="btn-edit" onclick="cambiar_parrafo()">
-                                    <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
-                                </div>
+                            </div>  
+                        </div>
+                        <div class="col-2 sm-3 data-control">
+                            <div class="btn-edit"  data-bs-toggle="modal" data-bs-target="#editarEducacion">
+                                <a class="btn-right"><i class="fa fa-edit"></i></a>
+                            </div>
+                            <div class="btn-edit" data-bs-toggle="modal" data-bs-target="">
+                                <a class="btn-right"><i class="fa fa-times"></i></a>
                             </div>
                         </div>
                     </div>
@@ -33,8 +36,83 @@
         </ul>
     </div>
 </div>
+        <!-- Modal -->
+        <div class="modal fade" id="editarEducacion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Eduacion - Editar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!--inicio body-->
+                    <div class="modal-body">
+                    <!--Institución-->
+                        <form class="row g-3 needs-validation" novalidate>
+                            <div class="col-md-12 position-relative">
+                                <label for="validationTooltip01" class="form-label">Institución:</label>
+                                <input type="text" class="form-control" id="validationTooltip01" value="" required>
+                            <div class="invalid-tooltip">
+                                ingrese un dato valido
+                            </div>
+                        </div>
+                        <!--Carrera-->
+                        <div class="col-md-12 position-relative">
+                            <label for="validationTooltip01" class="form-label">Carrera:</label>
+                            <input type="text" class="form-control" id="validationTooltip01" value="" required>
+                             <div class="valid-tooltip">
+                                 Looks good!
+                             </div>
+                             <div class="col-md-12 position-relative">
+                                <label for="validationTooltip02" class="form-label">Título</label>
+                                <input type="text" class="form-control" id="validationTooltip02" value="" required>
+                                <div class="invalid-tooltip">
+                                    ingrese un dato válido
+                                </div>
+                              </div>
+                         </div>
+                         <!--Estado-->
+                        <div class="col-md-4 position-relative">
+                            <label for="validationTooltip04" class="form-label">Estado:</label>
+                            <select class="form-select" id="validationTooltip04" required>
+                                <option selected disabled value="">Elija Opción</option>
+                                <option>Aprobado</option>
+                                <option>Cursando</option>
+                            </select>
+                            <div class="invalid-tooltip">
+                                Seleccione una opcion
+                            </div>
+                        </div>
+                        <!--promedio-->
+                        <div class="col-md-4 position-relative">
+                            <label for="validationTooltip01" class="form-label">Promedio:</label>
+                            <input type="text" class="form-control" id="validationTooltip01" value="" required>
+                             <div class="invalid-tooltip">
+                                 ingrese un dato válido
+                             </div>
+                         </div>
+                         <!--Fecha Inicio y Fin-->
+                         <div class="col-md-12 position-relative">
+                            <mat-form-field appearance="outline">
+                              <mat-label>Ingrese Fechas de Inicio - Fin</mat-label>
+                              <mat-date-range-input [rangePicker]="picker">
+                                <input matStartDate formControlName="fechaInicio" placeholder="Start date">
+                                <input matEndDate formControlName="fechaFin" placeholder="End date">
+                              </mat-date-range-input>
+                              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                              <mat-date-range-picker #picker></mat-date-range-picker>
+                            </mat-form-field>
+                          </div>         
+                    </form>                    
+                    </div>
+                    <!--fin body-->
+                    <div class="modal-footer">
+                        <div class="col-12">                            
+                            <button type="submit" class="btn btn-success">Guardar cambios</button>                            
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-<div>
-    <input id="edit-acercade" type="text" oninput="myfuction2(this.value)" style="display:none">
-    <input type="file" id="file1" onchange="showFile(this)" style="display:none">
-</div>

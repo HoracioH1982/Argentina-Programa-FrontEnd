@@ -1,0 +1,127 @@
+<!--------------------------------------------- card acerca de mi -->
+<div class="container_info">
+    <div class="container_content">
+      <div class="container_content_inner">
+        <div class="title">
+          <h1>Sobre mi</h1>
+        </div>
+        <div class="par">
+          <p class="a">Programador</p>
+          <p class="b">Fisioterapeuta</p>
+          <p class="c">Osteopata</p>
+          <p class="d">Me llamo P>blo y vivo en Argentina, hace casi dos años empece en este mundo nuevo para mi, lleno de preguntas pero dispuesto a encontrar sus respuestas.
+            Soy curioso, inquieto, amante de la naturaleza y el deporte.  
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container_outer_img">
+      <div class="img-inner">
+        <img src='../assets/1688.jpg' alt="" class="container_img" />
+      </div>
+    </div>
+  </div>
+  <div class="overlay"></div>
+  <!-- ---------------------------------------------------fin card acerca de mi -->
+  
+  <!-- inicio tabla educacion -->
+  <article id="educ" >
+    <h2>Educacion <i class="fa-regular fa-pen-to-square text-info" data-bs-toggle="modal" data-bs-target="#exampleModal4"
+        *ngIf="ulogged != ''"></i></h2>
+  
+    <div class="table-wrapper containerEdu">
+      <table class="fl-table ">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Inicio</th>
+            <th scope="col">Fin</th>
+            <th scope="col">Tipo de Educacion</th>
+            <th scope="col" *ngIf="ulogged != ''">Editar</th>
+            <th scope="col" *ngIf="ulogged != ''">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of listeducaciones">
+            <td>{{ item.nombre }}</td>
+            <td>{{ item.fechaInicio }}</td>
+            <td>{{ item.fechaFin }}</td>
+            <td>{{ item.tipoEducacion.nombretedu}}</td>
+            <!-- boton para editar educacion -->
+            <td data-bs-toggle="modal" data-bs-target="#exampleModal4" *ngIf="ulogged != ''">
+              <i (click)="editarEducacion(item)" class="fa-regular fa-pen-to-square text-info"></i>
+            </td>
+            <!-- boton para eliminar educacion -->
+            <td *ngIf="ulogged != ''">
+              <i (click)="eliminarEducacion(item.id)" class="fa-regular fa-trash-can text-danger"></i>
+            </td>
+          </tr>
+        <tbody>
+      </table>
+    </div>
+  </article>
+  <!-- fin tabla educacion -->
+  
+ <!--modal AMBL Educacion  ----------------------------->
+<div class="modal fade" id="exampleModal4" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Educacion</h5>
+            <button type="button" class="btn-close btn-light" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="">
+                    <div class="">
+                        <div>
+                            <h5 class="titulo"> accion | uppercase  Educacion</h5>
+                            <form class="example-form"  ><!--[formGroup]="educations" (ngSubmit)="guardarEducaciones()"-->
+                                <!-- div nombre -->
+                                <div>
+                                    <mat-form-field appearance="legacy">
+                                        <mat-label>Nombre</mat-label>
+                                        <input matInput formControlName="nombre" type="text"
+                                            placeholder="Nombre de la educacion">
+                                    </mat-form-field>
+                                </div>
+                                <!-- fechas -->
+                                <div>
+                                    <mat-form-field appearance="legacy">
+                                        <mat-label>Ingrese un rango de fechas</mat-label>
+                                        <mat-date-range-input >
+                                            <input matStartDate formControlName="fechaInicio"
+                                                placeholder="Start date">
+                                            <input matEndDate formControlName="fechaFin" placeholder="End date">
+                                        </mat-date-range-input><!--[rangePicker]="picker"-->
+                                        <mat-datepicker-toggle matSuffix ></mat-datepicker-toggle> <!--[for]="picker"-->
+                                        <mat-date-range-picker #picker></mat-date-range-picker>
+                                    </mat-form-field>
+                                </div>
+                                <!--- div tipo de educacion -->
+                                <mat-form-field appearance="legacy">
+                                    <mat-label>Tipo de Educacion</mat-label>
+                                    <mat-select formControlName="tipoEducacion">
+                                        <mat-option >
+                                            eleccion.nombretedu
+                                        </mat-option><!--*ngFor="let eleccion of tipoeducaciones" [value]="eleccion"-->
+                                    </mat-select>
+                                </mat-form-field>
+                                <!--div boton aceptar -->
+                                <div class="d-grid gap-2">
+                                    <button  type="submit"
+                                        class="btn btn-success btn-lg">
+                                        <i class="fa-solid fa-database"></i>&nbsp; Aceptar
+                                    </button><!--[disabled]="this.educations.invalid"-->
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- fin:-----educacion modal -->

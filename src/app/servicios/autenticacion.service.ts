@@ -9,9 +9,10 @@ import { map } from 'rxjs/operators';
 export class AutenticacionService {
   //crear variable con url de la api y objeto par ael obrservable
   url="http://localhost:8080/auth/";
+  token: any;
+  currentUserSubject: BehaviorSubject<any>;
   //api="http://localhost:8080/auth/";
   //apiHeroku="https://limitless-gorge-37634.herokuapp.com/auth/";
-  currentUserSubject: BehaviorSubject<any>;
 
   constructor(private http:HttpClient) { 
     console.log("El servicio de autenticación está corriendo");
@@ -28,6 +29,15 @@ export class AutenticacionService {
       return data;
     }))
   }
+
+  //cerrar sesion, remueve item del local storage
+  cerrarSesion(){
+    localStorage.removeItem('currentUser');
+  }
+  
+  public get logIn(): boolean {
+    return (localStorage.getItem('currentUser') !== null);
+ }
 
   get UsuarioAutenticado()
   {

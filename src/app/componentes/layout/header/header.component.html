@@ -11,38 +11,42 @@
             <div id="MenuNavegacion" class="collapse navbar-collapse ml-auto">
                 <div class="navbar-collapse"></div>    
                 <div *ngFor="let redesSociales of redesList">
-                    <a [href]="redesSociales.url" target="_blank">
-                        <img [src]="redesSociales.img" 
+                    <a [href]="redesSociales.urlRed" target="_blank">
+                        <img [src]="redesSociales.urlImg" 
                         [alt]="redesSociales.nombre" width="35" height="35" Style="margin:5px;">                    
                     </a>  
-                </div>                    
-                    <a routerLink="" class="btn btn-outline-success bg-primary text-white">Iniciar Sesión</a>
+                </div>       
+                    <button class="btn btn-outline-success bg-primary text-white" href="#" routerLink= "/login">Iniciar Sesión</button>
+                    <!--*nfIf="!autenticacionService.logIn"-->
+                    <button class="btn btn-outline-success bg-primary text-white" href="#">Cerrar Sesión</button> 
+                <!--(click) = "cerrarSesion()" *ngIf="autenticacionService.logIn" -->
                 <ul class="navbar-nav">
-                    <li class="nav-item dropdown">
-                        <div class="nav-link circulo_profile" style="display: none" href="#" id="navbarDropdown" 
-                            role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false"><span
-                            class="iniciales">HH</span></div> <!--ponerIniciales(this.nombre)
-                            TS:
-                            ponerIniciales(nameString: string) {
-                            const fullName : any = nameString.split(' ');
-                            const initials = fullName.shift().charAt(0) + fullName.pop().charAt(0);
-                            return initials.toUpperCase();
-                            }
-                            -->
-                        <!--*ngIf="!logeado"-->
+                    <li class="nav-item dropdown">                         
+                        <div routerLink= "profile" class="nav-link circulo_profile" href="#" id="navbarDropdown" 
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false"><span
+                            class="iniciales" >HH</span></div>
+                        <!--*ngIf="!logeado" *nfIf="autenticacionService.logIn"-->
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                             <li><p class="dropdown-item">inicio</p></li>
                             <div class="dropdown-divider"></div>
                             <li><a class="dropdown-item">Acerca de</a></li>
-                            <li><a class="dropdown-item">Experiencia</a></li>
-                            <li><a class="dropdown-item">Educación</a></li>
-                            <li><a class="dropdown-item">Soft/Hard Skills</a></li>
-                            <li><a class="dropdown-item">Proyectos</a></li>
+                            <li><a class="dropdown-item" href="#experiencia">Experiencia</a></li>
+                            <li><a class="dropdown-item" name="#educacion">Educación</a></li>
+                            <li><a class="dropdown-item" href="#shSkills">Soft/Hard Skills</a></li>
+                            <li><a class="dropdown-item" href="#proyectos">Proyectos</a></li>
                             <div class="dropdown-divider"></div>
                             <li><a class="dropdown-item">Cerrar Sesión</a></li>
                         </ul>
                     </li>
+                     <!--
+                        ponerIniciales(this.nombre)
+                        TS:
+                        ponerIniciales(nameString: string) {
+                        const fullName : any = nameString.split(' ');
+                        const initials = fullName.shift().charAt(0) + fullName.pop().charAt(0);
+                        return initials.toUpperCase();
+                    }
+                    -->                    
                 </ul>
 
             </div>

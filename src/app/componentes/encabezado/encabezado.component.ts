@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
+import { PersonaService } from 'src/app/servicios/persona.service';
+import { AutenticacionService } from 'src/app/servicios/autenticacion.service';
+
 
 @Component({
   selector: 'app-encabezado',
@@ -7,14 +11,32 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
   styleUrls: ['./encabezado.component.css']
 })
 export class EncabezadoComponent implements OnInit {
-miPortfolio:any;
-  constructor(private datosPortfolio:PortfolioService) { }
+ListaPerso:any;
+constructor(private personaService: PersonaService, private autenticacionService:AutenticacionService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data=>{
+    this.personaService.obtenerPersonaPorId().subscribe(data=>{
       console.log(data);
-      this.miPortfolio=data;
+      this.ListaPerso=data;
     });
-  }
+  } 
 
+
+
+
+  //datosPortfolio.obtenerDatos().subscribe(data=>{
+    /*
+
+
+
+      constructor(private LoginService:LoginService, 
+              private Http:HttpClient, 
+              private routes:Router,
+              private _personaService:PersonaService) {
+
+    Http.get(this.rutaapi+"ver").subscribe(data=>{
+      //console.log(data);
+      this.databanner=data;
+    })
+    */
 }

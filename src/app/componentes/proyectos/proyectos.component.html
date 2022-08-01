@@ -6,74 +6,153 @@
         <ul class="item-list" style="list-style-type:none">
             <li *ngFor="let proyectos of proyectosList">
                 <div class="data-container">
-                    <div class="row">
-                        <div class="col-4 sm-3" style="padding-left: 40px">
+                     <div class="row">
+                        <div class="col-10 sm-3" style="padding-left: 40px">
                             <div class="list-info">
                                 <div>
                                     <h3>{{proyectos.nombre}}</h3>
                                     <p>{{proyectos.descripcion}}</p>
-                                    <p><time>{{proyectos.start}}</time> - <time>{{proyectos.end}}</time></p>
-                                    <p><a [href]="proyectos.link_repo">{{proyectos.link_repo}}</a></p>
-                                    <p><a [href]="proyectos.link_sitio">{{proyectos.link_sitio}}</a></p>
-                                </div>
-                                <div class="data-control">
-                                    <div class="btn-edit" onclick="cambiar_parrafo()">
-                                        <a href="#" class="btn-right"><i class="fa fa-pen"></i></a>
-                                    </div>
+                                    <p><time>{{proyectos.inicio}}</time> - <time>{{proyectos.fin}}</time></p>
+                                    <p><a [href]="proyectos.link_repo">{{proyectos.urlRepo}}</a></p>
+                                    <p><a [href]="proyectos.link_sitio">{{proyectos.urlSitio}}</a></p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-8 sm-3 text-center">                            
-                            <div [id]="proyectos.id" class="carousel slide" data-bs-ride="false">
-                                <div class="carousel-indicators">
-                                    <button type="button" [attr.data-bs-target]="'#'+proyectos.id"  data-bs-slide-to="0"
+                        <div class="col-2 sm-3 data-control">
+                            <div class="btn-edit"  data-bs-toggle="modal" data-bs-target="#editarEducacion">
+                                <a class="btn-right"><i class="fa fa-edit"></i></a>
+                            </div>
+                            <div class="btn-edit" data-bs-toggle="modal" data-bs-target="">
+                                <a class="btn-right"><i class="fa fa-times"></i></a>
+                            </div>
+                        </div>
+                    </div>   
+                        <br>
+                        <div class="col-12 sm-3 text-center">                            
+                            <div [id]="proyectos.nombre.substr(0,1)" class="carousel slide" data-bs-ride="false">
+                                <div class="carousel-indicators">                                    
+                                    <button type="button" [attr.data-bs-target]="'#'+proyectos.nombre.substr(0,1)"  data-bs-slide-to="0"
                                         class="active" aria-current="true" aria-label="'Home'"></button>                                        
-                                    <button type="button" [attr.data-bs-target]="'#'+proyectos.id" data-bs-slide-to="1"
+                                    <button type="button" [attr.data-bs-target]="'#'+proyectos.nombre.substr(0,1)" data-bs-slide-to="1"
                                         aria-label="'Registro'"></button>
-                                    <button type="button" [attr.data-bs-target]="'#'+proyectos.id" data-bs-slide-to="2"
+                                    <button type="button" [attr.data-bs-target]="'#'+proyectos.nombre.substr(0,1)" data-bs-slide-to="2"
                                         aria-label="'Dashboard'"></button>
                                 </div>
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img [src]="proyectos.img1" class="d-block w-100" alt="Home">
+                                        <img [src]="proyectos.urlImg1" class="d-block w-100" alt="Home">
                                         <div class="carousel-caption d-none d-md-block">                                           
-                                            <p>Home</p>
+                                            <p><b>1</b></p>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <img [src]="proyectos.img2" class="d-block w-100" alt="Registro">
+                                        <img [src]="proyectos.urlImg2" class="d-block w-100" alt="Registro">
                                         <div class="carousel-caption d-none d-md-block">                                            
-                                            <p>Registro</p>
+                                            <p><b>2</b></p>
                                         </div>
                                     </div>
                                     <div class="carousel-item">
-                                        <img [src]="proyectos.img3" class="d-block w-100" alt="Dashboard">
+                                        <img [src]="proyectos.urlImg3" class="d-block w-100" alt="Dashboard">
                                         <div class="carousel-caption d-none d-md-block">                                           
-                                            <p>Dashboard</p>
+                                            <p bg-color-secondary><b>3</b></p>
                                         </div>
                                     </div>
                                 </div>
                                 <button class="carousel-control-prev" type="button"
-                                    [attr.data-bs-target]="'#'+proyectos.id" data-bs-slide="prev">
+                                    [attr.data-bs-target]="'#'+proyectos.nombre.substr(0,1)" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
                                 </button>
                                 <button class="carousel-control-next" type="button"
-                                    [attr.data-bs-target]="'#'+proyectos.id" data-bs-slide="next">
+                                    [attr.data-bs-target]="'#'+proyectos.nombre.substr(0,1)" data-bs-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Next</span>
                                 </button>
                             </div>
-                        </div>
+                        </div>   
+                        <br>                 
                     </div>
-                </div>
                 <br>
             </li>
         </ul>
     </div>
 </div>
-
-<div>
-    <input id="edit-acercade" type="text" oninput="myfuction2(this.value)" style="display:none">
-    <input type="file" id="file1" onchange="showFile(this)" style="display:none">
-</div>
+        <!-- Modal -->
+        <div class="modal fade" id="editarEducacion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Eduacion - Editar</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!--inicio body-->
+                    <div class="modal-body">
+                    <!--Institución-->
+                        <form class="row g-3 needs-validation" novalidate>
+                            <div class="col-md-12 position-relative">
+                                <label for="validationTooltip01" class="form-label">Institución:</label>
+                                <input type="text" class="form-control" id="validationTooltip01" value="" required>
+                            <div class="invalid-tooltip">
+                                ingrese un dato valido
+                            </div>
+                        </div>
+                        <!--Carrera-->
+                        <div class="col-md-12 position-relative">
+                            <label for="validationTooltip01" class="form-label">Carrera:</label>
+                            <input type="text" class="form-control" id="validationTooltip01" value="" required>
+                             <div class="valid-tooltip">
+                                 Looks good!
+                             </div>
+                             <div class="col-md-12 position-relative">
+                                <label for="validationTooltip02" class="form-label">Título</label>
+                                <input type="text" class="form-control" id="validationTooltip02" value="" required>
+                                <div class="invalid-tooltip">
+                                    ingrese un dato válido
+                                </div>
+                              </div>
+                         </div>
+                         <!--Estado-->
+                        <div class="col-md-4 position-relative">
+                            <label for="validationTooltip04" class="form-label">Estado:</label>
+                            <select class="form-select" id="validationTooltip04" required>
+                                <option selected disabled value="">Elija Opción</option>
+                                <option>Aprobado</option>
+                                <option>Cursando</option>
+                            </select>
+                            <div class="invalid-tooltip">
+                                Seleccione una opcion
+                            </div>
+                        </div>
+                        <!--promedio-->
+                        <div class="col-md-4 position-relative">
+                            <label for="validationTooltip01" class="form-label">Promedio:</label>
+                            <input type="text" class="form-control" id="validationTooltip01" value="" required>
+                             <div class="invalid-tooltip">
+                                 ingrese un dato válido
+                             </div>
+                         </div>
+                         <!--Fecha Inicio y Fin-->
+                         <div class="col-md-12 position-relative">
+                            <mat-form-field appearance="outline">
+                              <mat-label>Ingrese Fechas de Inicio - Fin</mat-label>
+                              <mat-date-range-input [rangePicker]="picker">
+                                <input matStartDate formControlName="fechaInicio" placeholder="Start date">
+                                <input matEndDate formControlName="fechaFin" placeholder="End date">
+                              </mat-date-range-input>
+                              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                              <mat-date-range-picker #picker></mat-date-range-picker>
+                            </mat-form-field>
+                          </div>         
+                    </form>                    
+                    </div>
+                    <!--fin body-->
+                    <div class="modal-footer">
+                        <div class="col-12">                            
+                            <button type="submit" class="btn btn-success">Guardar cambios</button>                            
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonaService } from 'src/app/servicios/persona.service';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
@@ -8,12 +9,12 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class HardSoftSkillsComponent implements OnInit {
   habilidadesList:any;
-  constructor(private datosPortfolio:PortfolioService) { }
+  constructor(private personaService: PersonaService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data=>{
+    this.personaService.obtenerHabilidad().subscribe(data=>{
       console.log(data);
-      this.habilidadesList=data.habilidades;     
+      this.habilidadesList=data;     
     });
   }
 

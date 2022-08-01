@@ -1,18 +1,63 @@
-    <!--Acerca de-->
-    <div class="card mat-card" id="second-card">
-        <div class="card-titles">
-            <h2>Acerca de</h2>
-            <div class="btn-edit" onclick="cambiar_parrafo()">
-                <a href="#" class="btn-right">
-                    <i class="fa fa-pen"></i>
-                </a>
+<!--Acerca de-->
+<div class="card mat-card" id="second-card">
+    <div class="card-titles">
+        <h2>Acerca de</h2>
+    </div>
+    <div class="row">    
+        <div class="col-10 sm-3">
+            <p id="text-acercade">{{acercaDe.sobreMi}}</p>
+        </div>
+        <div class="col-2 sm-3 data-control">
+            <div class="btn-edit" data-bs-toggle="modal" data-bs-target="#editarAcercade">
+                <a class="btn-right"><i class="fa fa-edit"></i></a>
+            </div>
+            <div class="btn-edit" data-bs-toggle="modal" data-bs-target="">
+                <a class="btn-right"><i class="fa fa-times"></i></a>
             </div>
         </div>
-        <div>
-            <p id="text-acercade">{{acercaDe.about}}</p>
-        </div>
-        <div>
-            <input id="edit-acercade" type="text" oninput="myfuction2(this.value)" style="display:none">
-            <input type="file" id="file1" onchange="showFile(this)" style="display:none">
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="editarAcercade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Acerca de - Editar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="col-md-12 position-relative" style="padding: 4px 4px;">
+                <label for="validationTooltip02" class="form-label">Sobre Mi:</label>
+                <input type="text" class="form-control" id="validationTooltip02" value="" required>
+                <div class="invalid-tooltip">
+                    ingrese un dato válido
+                </div>
+              </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Guardar cambios</button>
+            </div>
         </div>
     </div>
+</div>
+
+<!--Scripts-->
+<script>
+    //carga el contenido de un archivo de texto para mostrarlo en el párrafo
+    function showFile(input) {
+        let file = input.files[0];
+        alert(`File name: ${file.name}`);
+        alert(`Last modified: ${file.lastModified}`);
+
+        let reader = new FileReader();
+        reader.readAsText(file);
+        reader.onload = function () {
+            console.log(reader.result);
+            document.getElementById("text-acercade").innerText = reader.result;
+        };
+        reader.onerror = function () {
+            console.log(reader.error);
+        };
+    }
+
+</script>
