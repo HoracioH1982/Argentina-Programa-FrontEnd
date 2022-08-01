@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PortfolioService {
-  //url:string="http://npinti.ddns.net:9008/api/";
+
   constructor(private http:HttpClient) {}
   
   obtenerDatos():Observable<any>

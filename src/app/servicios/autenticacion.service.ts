@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
 })
 export class AutenticacionService {
   //crear variable con url de la api y objeto par ael obrservable
-  url="http://localhost:8080/auth/";
+  url="https://damp-lake-70982.herokuapp.com/datos/";
   token: any;
   currentUserSubject: BehaviorSubject<any>;
   //api="http://localhost:8080/auth/";

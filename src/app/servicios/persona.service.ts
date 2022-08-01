@@ -9,7 +9,7 @@ export class PersonaService {
 
   private persona$ = new Subject<any>();
   //localhost:8080/ver/persona
-  private Url = 'http://localhost:8080';
+  private Url = 'https://damp-lake-70982.herokuapp.com';
   private Api = '/datos/';
 
   //localhost:8080/ver/persona

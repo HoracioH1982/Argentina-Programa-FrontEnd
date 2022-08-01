@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class AuthService {
 
-  url = 'http://localhost:8080/';
+  url = 'https://damp-lake-70982.herokuapp.com';
   Api = '"/datos/"';
   //token: ; 
 
